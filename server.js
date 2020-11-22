@@ -5,6 +5,7 @@ var fibonacci = require('./fibonacci');
 var mdc = require('./mdc');
 var contador = require('./contador');
 var numPrimo = require('./numPrimo');
+var somatorio = require('./somatorio');
 
 var app = express();
 
@@ -86,6 +87,23 @@ app.post('/numPrimo', function(req, res) {
     var resultado = numPrimo.numPrimo(numP);
     res.render('resultado-numPrimo', {
         titulo: 'Resultado',
+        resultado: resultado
+    })    
+});
+
+app.get('/somatorio', function(req, res) {
+    res.render('somatorio', {
+        titulo: 'Somatório'
+    });
+    
+});
+    
+app.post('/somatorio', function(req, res) {
+    var numSoma = req.body.numSoma;
+    var resultado = somatorio.somatorio(numSoma);
+    res.render('resultado-somatorio', {
+        titulo: 'Resultado',
+        numSoma: numSoma,
         resultado: resultado
     })    
 });

@@ -100,11 +100,11 @@ app.get('/somatorio', function(req, res) {
     
 app.post('/somatorio', function(req, res) {
     var numSoma = req.body.numSoma;
-    arraySoma = numSoma.split(/\s*;\s*/);
-    resultado = somatorio.somatorio(arraySoma);
+    resultado = somatorio.somatorio(numSoma);
 
     res.render('resultado-somatorio', {
         titulo: 'Resultado',
+        numSoma: numSoma,
         resultado: resultado
     })  
 });

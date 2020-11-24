@@ -1,63 +1,23 @@
-var quantNum = 10;
+function quickSort(segArray) {
+	if (segArray.length <= 1) { 
+		return segArray;
+	} else {
+		let esqrd = [];
+		let dir = [];
+		let array1 = [];
+		let pivot = segArray.pop();
 
-var array = [];
-
-for(i = 0; i < quantNum; i++){
-    var num = readlineSync.questionInt("Digite o número: ");
-    array.push(num);
-}
-
-console.log("O vetor desornado tem os seguintes elementos: " + array + ".")
-
-function swap(array, left, right){
-    var aux = array[left];
-    array[left] = array[right];
-    array[right] = aux;
-}    
-
-function partition (array, left, right){
-    var pivot = array[Math.floor((left + right)/2)]
-    
-    while(left <= right){
-        while(array[left] < pivot){
-            left++
-        }    
-    
-        while(array[right] > pivot){
-            right--
-        }
-
-        if(left <= right){
-            swap(array, left, right);
-            left++
-            right--
-        }
-    }
-
-    return left;
+		for (let i = 0; i < segArray.length; i++) {
+			if (segArray[i] <= pivot) {
+				esqrd.push(segArray[i]);
+			} else {
+				dir.push(segArray[i]);
+			}
+		}
+		return array1.concat(quickSort(esqrd), pivot, quickSort(dir));
+	}
 
 }
-
-function QuickSort(array, left, right){
-    
-    var index;
-
-    if(array.length > 1){
-        
-        index = partition(array, left, right);
-        
-        if(left < index - 1){
-            QuickSort(array, left, index - 1);
-        }
-
-        if(index < right){
-            QuickSort(array, index, right);
-        }
-    }
-    
-    return array
+module.exports = {
+    quickSort
 }
-
-var result = QuickSort(array, 0, array.length - 1);
-
-console.log("O vetor ordenado com o QuickSort ficou com a seguinte ordem: " + result + " .")

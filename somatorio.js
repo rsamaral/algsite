@@ -1,25 +1,12 @@
-function somatorio(numSoma){
+function somatorio(numeros){
+    let total = 0;
 
-    var arr = [1,2,3,4];
-    var total = 0;
-    for(var i in arr) { total += arr[i]; }
-    console.log(total)
-
-    // var array = arr.toString().split(" , ");
-    
-    // var soma = 0;
-    
-    // for(var i = 0; i < arr.length; i++){
-    //     var soma = soma + parseInt(array[i]);
-        
-    // }
-
-    // console.log(soma)
-    // return soma;
-}
+    for ( let i = 0; i < numeros.length; i++){
+       total += numeros[i];
+    }
+    return total
+    }
 
 module.exports = {
     somatorio
 }
-
-somatorio(1, 4, 5)

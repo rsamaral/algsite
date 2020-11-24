@@ -100,11 +100,31 @@ app.get('/somatorio', function(req, res) {
     
 app.post('/somatorio', function(req, res) {
     var numSoma = req.body.numSoma;
-    var resultado = somatorio.somatorio(numSoma);
+    arraySoma = numSoma.split(/\s*;\s*/);
+    resultado = somatorio.somatorio(arraySoma);
+
     res.render('resultado-somatorio', {
         titulo: 'Resultado',
-        numSoma: numSoma,
         resultado: resultado
+    })  
+});
+
+
+app.get('/quicksort', function(req, res) {
+    res.render('quicksort', {
+        titulo: 'quicksort'
+    });
+    
+});
+    
+app.post('/quicksort', function(req, res) {
+    let numArray = req.body.numArray;
+    arraydividido = numArray.split(/\s*;\s*/);
+    valor = quickSort.quickSort(arraydividido);
+    
+    res.render('resultado-quicksort',{      
+        titulo: 'quicksort',
+        valor: valor
     })    
 });
 

@@ -6,6 +6,7 @@ var mdc = require('./mdc');
 var contador = require('./contador');
 var numPrimo = require('./numPrimo');
 var somatorio = require('./somatorio');
+var quicksort = require('./quicksort');
 
 var app = express();
 
@@ -118,19 +119,22 @@ app.post('/somatorio', function(req, res) {
 
 app.get('/quicksort', function(req, res) {
     res.render('quicksort', {
-        titulo: 'quicksort'
+        titulo: 'quicksort',
+        resultado: ''
     });
     
 });
     
 app.post('/quicksort', function(req, res) {
     let numArray = req.body.numArray;
-    arraydividido = numArray.split(/\s*;\s*/);
-    valor = quickSort.quickSort(arraydividido);
+    var arraydividido = numArray.split(',').map(Number)
+    resultado = quicksort.quickSort(arraydividido)
     
-    res.render('resultado-quicksort',{      
+    
+    res.render('quicksort',{      
         titulo: 'quicksort',
-        valor: valor
+        numArray: numArray,
+        resultado: resultado
     })    
 });
 

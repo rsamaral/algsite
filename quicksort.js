@@ -1,17 +1,18 @@
-function quickSort(segArray) {
-	if (segArray.length <= 1) { 
-		return segArray;
+function quickSort(numArray) {
+
+	if (numArray.length <= 1) { 
+		return numArray;
 	} else {
 		let esqrd = [];
 		let dir = [];
 		let array1 = [];
-		let pivot = segArray.pop();
+		let pivot = numArray.pop();
 
-		for (let i = 0; i < segArray.length; i++) {
-			if (segArray[i] <= pivot) {
-				esqrd.push(segArray[i]);
+		for (let i = 0; i < numArray.length; i++) {
+			if (numArray[i] <= pivot) {
+				esqrd.push(numArray[i]);
 			} else {
-				dir.push(segArray[i]);
+				dir.push(numArray[i]);
 			}
 		}
 		return array1.concat(quickSort(esqrd), pivot, quickSort(dir));

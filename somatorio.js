@@ -1,5 +1,6 @@
 function somatorio(numSoma){
     var arr = numSoma.split(',').map(Number)
+    //console.log(arr);
     
     var soma = 0;
     

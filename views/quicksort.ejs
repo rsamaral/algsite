@@ -11,5 +11,10 @@
         <input name="numArray" type="text" id="numQuick">
         <button id="mostrar">Mostrar!</button>
     </form>
+    <p>
+        <%if (resultado) { %>
+            O array inserido foi: <%= numArray %>  <br> O array ordenado fica dessa maneira: <%= resultado %> 
+        <% } %>    
+    </p>
 </body>
 </html>

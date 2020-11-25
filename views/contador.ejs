@@ -11,5 +11,10 @@
         <input name="num" type="text" id="numContador">
         <button type="submit">Mostrar!</button>
     </form>
+    <p>
+        <%if (resultado) { %>
+            Existem <%= resultado %> números entre 1 e <%= num %>..
+        <% } %>    
+    </p>
 </body>
 </html>

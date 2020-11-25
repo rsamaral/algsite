@@ -23,8 +23,10 @@ app.get('/', function(req, res) {
 });
 
 app.get('/fibonacci', function(req, res) {
+    
     res.render('fibonacci', {
-        titulo: 'Fibonacci'
+        titulo: 'Fibonacci',
+        resultado: ''
     });
 
 });
@@ -32,8 +34,8 @@ app.get('/fibonacci', function(req, res) {
 app.post('/fibonacci', function(req, res) {
     var fib = req.body.quantFib;
     var resultado = fibonacci.fibonacci(fib);
-    res.render('resultado-fib', {
-        titulo: 'Resultado',
+    res.render('fibonacci', {
+        titulo: 'Fibonacci',
         fib : fib,
         resultado: resultado
     })
@@ -41,7 +43,8 @@ app.post('/fibonacci', function(req, res) {
 
 app.get('/mdc', function(req, res) {
     res.render('mdc', {
-        titulo: 'MDC'
+        titulo: 'MDC',
+        resultado: ''
     });
 
 });
@@ -50,8 +53,8 @@ app.post('/mdc', function(req, res) {
     var num1 = req.body.num1;
     var num2 = req.body.num2;
     var resultado = mdc.mdc(num1, num2);
-    res.render('resultado-mdc', {
-        titulo: 'Resultado',
+    res.render('mdc', {
+        titulo: 'MDC',
         num1: num1,
         num2: num2,
         resultado: resultado
@@ -60,7 +63,8 @@ app.post('/mdc', function(req, res) {
 
 app.get('/contador', function(req, res) {
     res.render('contador', {
-        titulo: 'Contador'
+        titulo: 'Contador',
+        resultado: ''
     });
     
 });
@@ -68,8 +72,8 @@ app.get('/contador', function(req, res) {
 app.post('/contador', function(req, res) {
     var num = req.body.num;
     var resultado = contador.contador(num);
-    res.render('resultado-contador', {
-        titulo: 'Resultado',
+    res.render('contador', {
+        titulo: 'Contador',
         num: num,
         resultado: resultado
     })    
@@ -77,7 +81,8 @@ app.post('/contador', function(req, res) {
 
 app.get('/numPrimo', function(req, res) {
     res.render('numPrimo', {
-        titulo: 'Números Primos'
+        titulo: 'Números Primos',
+        resultado: ''
     });
     
 });
@@ -85,15 +90,16 @@ app.get('/numPrimo', function(req, res) {
 app.post('/numPrimo', function(req, res) {
     var numP = req.body.numP;
     var resultado = numPrimo.numPrimo(numP);
-    res.render('resultado-numPrimo', {
-        titulo: 'Resultado',
+    res.render('numPrimo', {
+        titulo: 'Números Primos',
         resultado: resultado
     })    
 });
 
 app.get('/somatorio', function(req, res) {
     res.render('somatorio', {
-        titulo: 'Somatório'
+        titulo: 'Somatório',
+        resultado: ''
     });
     
 });
@@ -102,8 +108,8 @@ app.post('/somatorio', function(req, res) {
     var numSoma = req.body.numSoma;
     resultado = somatorio.somatorio(numSoma);
 
-    res.render('resultado-somatorio', {
-        titulo: 'Resultado',
+    res.render('somatorio', {
+        titulo: 'Somatório',
         numSoma: numSoma,
         resultado: resultado
     })  

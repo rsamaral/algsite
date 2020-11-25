@@ -12,6 +12,10 @@
         <input name="num2" type="text" id="num2">
         <button type="submit">Mostrar!</button>
     </form>
-
+    <p>
+        <%if (resultado) { %>
+            O MDC de <%= num1 %> e <%= num2 %> é <%= resultado %>.
+        <% } %>    
+    </p>
 </body>
 </html>

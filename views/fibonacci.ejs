@@ -11,5 +11,10 @@
         <input name="quantFib" type="text" id="fib">
         <button type="submit">Mostrar!</button>
     </form>
+    <p>
+        <%if (resultado) { %>
+            A sequência Fibonacci do número <%= fib %> tem os seguintes números: <%= resultado %>.
+        <% } %>    
+    </p>
 </body>
 </html>

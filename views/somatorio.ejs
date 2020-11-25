@@ -11,5 +11,10 @@
         <input name="numSoma" id="numSoma">
         <button>Mostrar!</button>
     </form>
+    <p>
+        <%if (resultado) { %>
+            O resultado da soma dos números <%= numSoma %>  é <strong><%= resultado %> </strong> 
+        <% } %>    
+    </p>
 </body>
 </html>

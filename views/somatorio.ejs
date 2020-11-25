@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador</title>
+    <title>Somatório</title>
 </head>
 <body>
     <h1><%= titulo %></h1>
-    <form method="POST" action="/contador">
-        <input name="num" type="text" id="numContador">
-        <button type="submit">Mostrar!</button>
+    <form method="POST" action="/somatorio">
+        <input name="numSoma" id="numSoma">
+        <button>Mostrar!</button>
     </form>
     <p>
         <%if (resultado) { %>
-            Existem <%= resultado %> números entre 1 e <%= num %>..
+            O resultado da soma dos números <%= numSoma %>  é <strong><%= resultado %> </strong> 
         <% } %>    
     </p>
 </body>

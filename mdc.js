@@ -4,9 +4,7 @@ function mdc(num1, num2){
     num1 = num2;
     num2 = resto;
   }
-
-  console.log('O MDC entre os dois número equivale à: ' + num1);
-
+  
   return num1;
 
 }

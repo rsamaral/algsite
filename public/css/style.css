@@ -97,14 +97,27 @@ font-size: 25px;
 }
 
 button{
-top: 546px;
-left: 776px;
-width: 142px;
-height: 55px;
-background: #717CFF 0% 0% no-repeat padding-box;
-border-radius: 11px;
-opacity: 1;
-font-size: 20px;
+
+height: 70px;
+    width: 210px;
+    background: #4C59FF;
+    left: 776px;
+    width: 142px;
+    height: 55px;
+    font-size: 16px;
+    margin-bottom: 5px;
+
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover{
+    cursor: pointer;
+    background: #717CFF;
+
 }
 
 p.lbl1{

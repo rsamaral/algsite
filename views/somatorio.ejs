@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('./partials/head.ejs'); %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
     <title>Somatório</title>
 </head>
+
 <body>
-    <h1><%= titulo %></h1>
-    <form method="POST" action="/somatorio">
-        <input name="numSoma" id="numSoma">
-        <button>Mostrar!</button>
-    </form>
-    <p>
-        <%if (resultado) { %>
-            O resultado da soma dos números <%= numSoma %>  é <strong><%= resultado %> </strong> 
-        <% } %>    
-    </p>
+    <div class="container">
+        <div class="titulo">
+            <h1><%= titulo %></h1>
+        </div>
+
+        <div class="strong">
+            <strong>Em matemática, somatório ou somatória é a adição de uma sequência de quaisquer tipos de números, chamados parcelas ou somando; o resultado é sua soma ou total.</strong>
+        </div>
+
+        <div class="formulario">
+            <form method="POST" action="/somatorio">
+                <p class="lbl1">Digite números inteiros separados por  " , "</p>
+                <input name="numSoma" id="input1">
+                <button>Mostrar!</button>
+            </form>
+        </div>
+
+        <p class="resposta">
+            <%if (resultado) { %>
+            O resultado da soma dos números <%= numSoma %> é <strong><%= resultado %> </strong>
+            <% } %>
+        </p>
+    </div>
 </body>
+
 </html>

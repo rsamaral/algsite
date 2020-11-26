@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('./partials/head.ejs'); %>
     <meta charset="UTF-8">
+    <%- include('./partials/head.ejs'); %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
     <title>Fibonacci</title>
 </head>
 <body>
-    <h1><%= titulo %></h1>
+    <div class="container">
+        <div class="titulo">
+            <h1><%= titulo %></h1>
+        </div>
+        <div class="strong">
+            <strong>MDC significa máximo divisor comum. O máximo divisor comum entre dois ou mais números naturais é o maior de seus divisores. Dois números naturais sempre têm divisores em comum.</strong>
+        </div>  
+        <div class="formulario">
     <form method="POST" action="/mdc">
-        <input name="num1" type="text" id="num1">
-        <input name="num2" type="text" id="num2">
+        <input name="num1" type="text" id="input1">
+        <p><input name="num2" type="text" id="input2"></p>
         <button type="submit">Mostrar!</button>
     </form>
-    <p>
+    </div>
+    <p class="resposta">
         <%if (resultado) { %>
             O MDC de <%= num1 %> e <%= num2 %> é <%= resultado %>.
         <% } %>    
     </p>
+    </div>
 </body>
 </html>

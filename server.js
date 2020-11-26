@@ -122,7 +122,7 @@ app.post('/somatorio', function(req, res) {
 
 app.get('/quicksort', function(req, res) {
     res.render('quicksort', {
-        titulo: 'quicksort',
+        titulo: 'Quicksort',
         resultado: ''
     });
     
@@ -135,7 +135,7 @@ app.post('/quicksort', function(req, res) {
     
     
     res.render('quicksort',{      
-        titulo: 'quicksort',
+        titulo: 'Quicksort',
         numArray: numArray,
         resultado: resultado
     })    

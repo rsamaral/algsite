@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <%- include('./partials/head.ejs'); %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Contador</title>
 </head>
 <body>
+    <div class="quadrados">
+
+<div class="titulo">
     <h1><%= titulo %></h1>
+</div>
+<div class="strong">
+    <strong>Insira 1 número, vamos contar quantos valores inteiros existem entre 1 e o número que você adicionou.</strong>
+</div>  
+
+
+<div class="formulario"> 
     <form method="POST" action="/contador">
-        <input name="num" type="text" id="numContador">
+        <p class="lbl1">Digite um número inteiro:</p>
+        <input name="num" type="text" id="input1">
         <button type="submit">Mostrar!</button>
     </form>
+</div>
+<p class="resposta">
     <p>
         <%if (resultado) { %>
             Existem <%= resultado %> números entre 1 e <%= num %>..
         <% } %>    
     </p>
+</div>
+</div>
 </body>
 </html>

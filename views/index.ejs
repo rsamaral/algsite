@@ -1,31 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <%- include('./partials/head.ejs'); %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <title>Site Algoritmos Fundamentais</title>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <h1><%= titulo %></h1>
-    <div>
-        <a href="/fibonacci"> Sequência de Fibonacci </a>
+    <div class="dashboard">
+        <div class="content">
+            <div class="introduction">
+                <span class="alg">Algoritmos <span class="fund">Fundamentais</span></span>
+                <span class="descrip">Chega um dia em que todos precisamos utilizar algum dos 7 algoritmos fundamentais, e nós estamos aqui para lhe ajudar! Escolha um dos algoritmos abaixo e aproveite!</span>
+            </div>
+            <div class="pages">
+                <div class="container" id="primario">
+                    <a href="/numPrimo">
+                        <div class="text">
+                            <span class="titulo">Números Primos</span>
+                            <span class="descricao">Qualquer número cujo conjunto dos divisores não inversíveis não é vazio.</span>
+                        </div>
+                        <div class="experimentar">
+                            <span>Experimentar</span>
+                        </div>
+                    </a>
+                </div>
+        
+                <div class="container" id="somatorio" >
+                    <a href="/somatorio">
+                        <div class="text">
+                            <span class="titulo">Somatório</span>
+                            <span class="descricao">Adição de uma sequência de quaisquer tipos de números inteiros reais.</span>
+                        </div>
+                        <div class="experimentar">
+                            <span>Experimentar</span>
+                        </div>
+                    </a>
+                </div>
+        
+                <div class="container" id="fibonacci">
+                    <a href="/fibonacci">
+                        <div class="text">
+                            <span class="titulo">Fibonacci</span>
+                            <span class="descricao">Sequência de números na qual cada termo subsequente é a soma dos dois anteriores.</span>
+                        </div>
+                        <div class="experimentar">
+                            <span>Experimentar</span>
+                        </div>
+                    </a>
+                </div>
+        
+                <div class="container" id="mdc">
+                    <a href="/mdc">
+                        <div class="text">
+                            <span class="titulo">MDC</span>
+                            <span class="descricao">O máximo divisor comum entre dois ou mais números inteiros reais.</span>
+                        </div>
+                        <div class="experimentar">
+                            <span>Experimentar</span>
+                        </div>
+                    </a>
+                </div>
+        
+                <div class="container" id="ordenacao">
+                    <a href="/quickSort">
+                        <div class="text">
+                            <span class="titulo">Ordenação</span>
+                            <span class="descricao">Algoritmo coloca números inteiros reais inseridos em ordem, sem limete de adição.</span>
+                        </div>
+                        <div class="experimentar">
+                            <span>Experimentar</span>
+                        </div>
+                    </a>
+                </div>
+        
+                <div class="container" id="contagem">
+                    <a href="/contador">
+                        <div class="text">
+                            <span class="titulo">Contagem</span>
+                            <span class="descricao">Dado um valor N, o algoritmo conta quantos valores inteiros existem entre 1 e N.</span>
+                        </div>
+                        <div class="experimentar">
+                            <span>Experimentar</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="imagem">
+            <img src="img/garota.PNG" alt="Garota">
+        </div>
+
     </div>
-    <div>
-        <a href="/mdc"> MDC </a>
-    </div>     
-    <div>
-        <a href="/contador"> Contador </a>
-    </div>     
-    <div>
-        <a href="/numPrimo"> Números Primos </a>
-    </div>     
-    <div>
-        <a href="/somatorio"> Somatório </a>
-    </div>     
-    <div>
-        <a href="/quickSort"> QuickSort </a>
-    </div>     
-
-
+    
 </body>
 </html>

@@ -16,11 +16,14 @@ ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    margin-left: 60px;
 }
 
 li{
     transition: all .2s ease-in-out; 
     display: inline;
+    margin-left: 6px;
 }
 
 
@@ -41,12 +44,12 @@ span.active {
     color: #FFF;
     opacity: 1 !important;
     content: '';
-    border-width: 0 0 3px;
-    border-style: solid;
 }
 
 li a:hover { 
-    transform: scale(1.1);  
+    transform: scale(1.1); 
+    opacity: 5 !important;
+    border-bottom: 3px solid #fff;
 }
 
 li a:focus{
@@ -54,16 +57,11 @@ li a:focus{
 }
 
 body{
-top: 0px;
-left: 0px;
-width: auto;
-height: auto;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-opacity: 1;
-text-align: center;
+
+background:#E6ECF0;
 }
 
-div.container{
+div.quadrados{
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,20 +1,23 @@
 var express = require('express');
 var path = require('path')
 var bodyParser = require('body-parser');
+// var expressLayouts = require('express-ejs-layouts');
 var fibonacci = require('./fibonacci');
 var mdc = require('./mdc');
 var contador = require('./contador');
 var numPrimo = require('./numPrimo');
 var somatorio = require('./somatorio');
 var quicksort = require('./quicksort');
+// var expressLayouts = require('express-ejs-layouts');
 
 var app = express();
 
+// app.use(expressLayouts);
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
-
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views'))
+app.use(express.static(__dirname + '/public'));
+app.set('views', path.join(__dirname, '/views'));
 
 app.get('/', function(req, res) {
     res.render('index', {

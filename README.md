@@ -47,6 +47,18 @@ Para rodar os testes, acesse a pasta do projeto
 
 ```bash
 
+    # Instale o Jest
+    $ npm install --save-dev jest
+
+    # Adicione a seguinte seção ao seu package.json:
+    {
+        "scripts": {
+            "test": "jest"
+        }
+    }
+
+    # Crie um arquivo *.test.js. Este arquivo conterá o nosso teste
+
     # Rode os casos de testes cadastrados
     $ npm test
 

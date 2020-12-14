@@ -1,18 +1,17 @@
 var express = require('express');
 var path = require('path')
 var bodyParser = require('body-parser');
-// var expressLayouts = require('express-ejs-layouts');
 var fibonacci = require('./fibonacci');
 var mdc = require('./mdc');
 var contador = require('./contador');
 var numPrimo = require('./numPrimo');
 var somatorio = require('./somatorio');
 var quicksort = require('./quicksort');
-// var expressLayouts = require('express-ejs-layouts');
+const PORT = process.env.PORT || 5000;
 
 var app = express();
 
-// app.use(expressLayouts);
+
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
@@ -141,7 +140,7 @@ app.post('/quicksort', function(req, res) {
     })    
 });
 
-var port = 3000;
-app.listen(port, function() {
-    console.log(`App de Exemplo escutando na porta http://localhost:${port}`);
+
+app.listen(PORT, function(){
+    console.log("Express server is running on port " + PORT)
 })

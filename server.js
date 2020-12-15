@@ -9,7 +9,7 @@ const somatorio = require('./somatorio');
 const quicksort = require('./quicksort');
 const firebase = require('firebase');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 var app = express();
 

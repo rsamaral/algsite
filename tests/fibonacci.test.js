@@ -8,4 +8,4 @@ test('fibonacci', ()=>{
 
 test('fibonacci', ()=>{
   expect(calc.fibonacci(6)).toStrictEqual(resposta2)
-})
+}) 

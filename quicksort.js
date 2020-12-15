@@ -1,5 +1,4 @@
 function quickSort(numArray) {
-
 	if (numArray.length <= 1) { 
 		return numArray;
 	} else {

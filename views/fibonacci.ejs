@@ -5,7 +5,7 @@
     <%- include('./partials/head.ejs'); %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
     <title>Fibonacci</title>
 </head>
 
@@ -15,21 +15,26 @@
             <h1><%= titulo %></h1>
         </div>
         <div class="strong">
-            <strong>É uma sucessão de números que, misteriosamente, aparece em muitos fenômenos da natureza. Descrita no final do século 12 pelo italiano Leonardo Fibonacci, ela é infinita e começa com 0 e 1. Os números ... </strong>
+            É uma sucessão de números que, misteriosamente, aparece em muitos fenômenos da natureza. Descrita no final do século 12 pelo italiano Leonardo Fibonacci, ela é infinita e começa com 0 e 1.
         </div>
+
         <div class="formulario">
             <form method="POST" action="/fibonacci">
                 <p class="lbl1">Digite um número inteiro:</p>
                 <input name="quantFib" type="text" id="input1">
-                <button type="submit">Mostrar!</button>
+                <div class="btn">
+                    <button type="submit">Mostrar!</button>
+                </div>
             </form>
         </div>
+
         <p class="resposta">
             <%if (resultado) { %>
-            A sequência Fibonacci do número <%= fib %> tem os seguintes números: <%= resultado %>.
+                A sequência Fibonacci do número <%= fib %> tem os seguintes elementos: <%= resultado %>.
             <% } %>
         </p>
     </div>
+
 </body>
 
 </html>

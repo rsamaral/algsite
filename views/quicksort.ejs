@@ -4,29 +4,36 @@
     <%- include('./partials/head.ejs'); %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
     <title>QuickSort</title>
 </head>
+
 <body>
     <div class="quadrados">
         <div class="titulo">
             <h1><%= titulo %></h1>
         </div>
+
         <div class="strong">
-            <strong>Ordenar valores inseridos dentro de um vetor, sem limite de adição.</strong>
+            Ordenar valores inseridos dentro de um vetor, sem limite de adição, utilizando o algoritmo QuickSort.
         </div>  
-        <div class="formulario">
-    <form method="POST" action="/quicksort">
-        <p class="lbl1">Digite números inteiros separados por  " , ":</p>
-        <input name="numArray" type="text" id="input1">
-        <button id="mostrar">Mostrar!</button>
-    </form>
+
+        <div class="formulario">    
+            <form method="POST" action="/quicksort">
+                <p class="lbl1">Digite números inteiros separados por  " , ":</p>
+                <input name="numArray" type="text" id="input1">
+                <div class="btn">
+                    <button type="submit">Mostrar!</button>
+                </div>
+            </form>
         </div>
-    <p class="resposta">
-        <%if (resultado) { %>
-            O array inserido foi: <%= numArray %>  <br> O array ordenado fica dessa maneira: <%= resultado %> 
-        <% } %>    
-    </p>
+
+        <p class="resposta">
+            <%if (resultado) { %>
+                O array inserido foi: <%= numArray %>  <br> O array ordenado fica dessa maneira: <%= resultado %> 
+            <% } %>    
+        </p>
     </div>
 </body>
+
 </html>

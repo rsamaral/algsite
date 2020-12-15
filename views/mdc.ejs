@@ -4,31 +4,44 @@
     <meta charset="UTF-8">
     <%- include('./partials/head.ejs'); %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
-    <title>Fibonacci</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <title>MDC</title>
 </head>
+
 <body>
     <div class="quadrados">
         <div class="titulo">
             <h1><%= titulo %></h1>
         </div>
+
         <div class="strong">
-            <strong>MDC significa máximo divisor comum. O máximo divisor comum entre dois ou mais números naturais é o maior de seus divisores. Dois números naturais sempre têm divisores em comum.</strong>
+            MDC significa máximo divisor comum. O máximo divisor comum entre dois ou mais números naturais é o maior de seus divisores. Dois números naturais sempre têm divisores em comum.
         </div>  
+
         <div class="formulario">
-    <form method="POST" action="/mdc">
-        <p>Digite o primeiro número inteiro:</p>
-        <input name="num1" type="text" id="input1">
-        <p>Digite o segundo número inteiro:</p>
-        <input name="num2" type="text" id="input2">
-        <button type="submit">Mostrar!</button>
-    </form>
-    </div>
-    <p class="resposta">
-        <%if (resultado) { %>
-            O MDC de <%= num1 %> e <%= num2 %> é <%= resultado %>.
-        <% } %>    
-    </p>
+            <form method="POST" action="/mdc">
+                <div class="flex-formulario">
+                    <div class="col-1">
+                        <p>Digite o primeiro número inteiro:</p>
+                        <input name="num1" type="text" id="input1">
+                    </div>
+                    <div class="col-1">
+                        <p>Digite o segundo número inteiro:</p>
+                        <input name="num2" type="text" id="input2">
+                    </div>
+                </div>
+                <div class="btn btn-mostrar-mdc">
+                    <button type="submit">Mostrar!</button>
+                </div>
+            </form>
+        </div>
+
+        <p class="resposta">
+            <%if (resultado) { %>
+                O MDC de <%= num1 %> e <%= num2 %> é <%= resultado %>.
+            <% } %>    
+        </p>
     </div>
 </body>
+
 </html>

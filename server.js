@@ -1,13 +1,15 @@
-var express = require('express');
-var path = require('path')
-var bodyParser = require('body-parser');
-var fibonacci = require('./fibonacci');
-var mdc = require('./mdc');
-var contador = require('./contador');
-var numPrimo = require('./numPrimo');
-var somatorio = require('./somatorio');
-var quicksort = require('./quicksort');
-const PORT = process.env.PORT || 5000;
+const express = require('express');
+const path = require('path')
+const bodyParser = require('body-parser');
+const fibonacci = require('./fibonacci');
+const mdc = require('./mdc');
+const contador = require('./contador');
+const numPrimo = require('./numPrimo');
+const somatorio = require('./somatorio');
+const quicksort = require('./quicksort');
+const firebase = require('firebase');
+
+const PORT = process.env.PORT || 3000;
 
 var app = express();
 

@@ -5,7 +5,10 @@
     <%- include('./partials/head.ejs'); %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <title>Números Primos</title>
 </head>
 
@@ -14,25 +17,29 @@
         <div class="titulo">
             <h1><%= titulo %></h1>
         </div>
+
         <div class="strong">
-            <strong>Números primos são aqueles divisíveis apenas por 1 e por eles mesmos. Estão presentes na Matemática
-                desde a Antiguidade, e vários métodos foram desenvolvidos a fim de verificar se um número é de fato
-                primo, como o Crivo de Erastóstenes. Caso deseje saber se um número é primo ou não, informe um número
-                inteiro no campo abaixo.</strong>
+            Números primos são aqueles divisíveis apenas por 1 e por eles mesmos. Caso deseje saber se um número é primo ou não, informe um número
+            inteiro no campo abaixo.
         </div>
 
         <div class="formulario">
             <form method="POST" action="/numPrimo">
                 <p class="lbl1">Digite um número inteiro:</p>
                 <input name="numP" type="text" id="input1">
-                <button type="submit">Mostrar!</button>
+                <div class="btn">
+                    <button type="submit">Mostrar!</button>
+                </div>
             </form>
         </div>
 
         <p class="resposta">
-            <%if (resultado) { %> <p><%= resultado %></p> <% } %>
+            <%if (resultado) { %>
+                <%= resultado %>
+            <% } %>
         </p>
     </div>
+
 </body>
 
 </html>

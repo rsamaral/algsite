@@ -11,6 +11,19 @@
                 <li><a href="/mdc"> MDC </a></li>
                 <li><a href="/quickSort"> Ordenação </a></li>
                 <li><a href="/contador"> Contagem </a></li>
+                <ul class='login-registro'>
+                    <% if(typeof currentUser === 'undefined' || currentUser == null) { %>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Cadastro</a></li>
+                    <% } else { %>
+                        <li><a href="/logout" id="deslogar">Deslogar</a></li>
+                    
+                        <% if(currentUser.displayName) { %>
+                            <img src="../img/usuariologado.PNG" alt="Usuario" id="imgUser">
+                            <span class='username'><%= currentUser.displayName %></span>
+                        <% } %>
+                    <% } %>
+                </ul>
             </ul>
     </div>
 </header>

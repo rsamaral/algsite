@@ -17,25 +17,47 @@ ul{
     margin: 0;
     padding: 0;
     display: flex;
-    margin-left: 60px;
+    margin-left: 30px;
+}
+
+.login-registro{
+    margin-left: 20px;
+}
+
+.username{
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    opacity: 0.66;
+    padding: 20px 0px 20px 0px;
+
+}
+
+#imgUser{
+    width: 60px;
+    height: 40px;
+    margin: 15px -10px 1px 20px;
+    padding: 0px;
 }
 
 li{
     transition: all .2s ease-in-out; 
     display: inline-block;
     margin-left: 6px;
+    
 }
 
 
 li a {
     text-align: left;
     font-family: 'Open Sans', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     color: #FFF;
     opacity: 0.66;
     text-decoration: none;
     display: inline-block;
-    padding: 20px 40px;
+    padding: 20px 30px;
 
 }
 

@@ -34,12 +34,7 @@ ul{
 
 }
 
-#imgUser{
-    width: 60px;
-    height: 40px;
-    margin: 15px -10px 1px 20px;
-    padding: 0px;
-}
+
 
 li{
     transition: all .2s ease-in-out; 
